@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 import { useDebounce } from "./useDebounce.js"
 import { searchUsers } from "../services/github.js"
 
-function useGithubUsers(query){
+function useGitHubUsers(query){
     const [users, setUsers] = useState([])
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState(null)
@@ -41,5 +41,5 @@ function useGithubUsers(query){
 }
 
 export{
-    useGithubUsers
+    useGitHubUsers
 }

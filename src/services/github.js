@@ -19,17 +19,18 @@ async function searchUsers(query){
 }
 
 //function for getting User Repo's using query(userName)
-async function getUserRepos(query){
-    try {
-        const res = await fetch(`https://api.github.com/users/${query}/repos`)
-        //convert Response in json format
-        const data = await res.json()
-        const latest = data.reverse()
-        //data reversed to get latest repos
-        return latest
-    } catch (error) {
-        console.log(error.message,"Error While Getting User Repos")
-    }
+async function getUserRepos(username, page = 1, perPage = 5) {
+  try {
+    //sort=updated is for latest repos & direction=desc is for newest first
+    const res = await fetch(
+      `https://api.github.com/users/${username}/repos?page=${page}&per_page=${perPage}&sort=updated&direction=desc`
+    )
+
+    const data = await res.json()
+    return data
+  } catch (error) {
+    console.log(error.message)
+  }
 }
 
 

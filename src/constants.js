@@ -1,0 +1,20 @@
+export const languages = [
+  { value: "", label: "Filter by Language" },
+  { value: "JavaScript", label: "JavaScript" },
+  { value: "TypeScript", label: "TypeScript" },
+  { value: "Python", label: "Python" },
+  { value: "Java", label: "Java" },
+  { value: "C++", label: "C++" },
+  { value: "C", label: "C" },
+  { value: "C#", label: "C#" },
+  { value: "Go", label: "Go" },
+  { value: "Rust", label: "Rust" },
+  { value: "Ruby", label: "Ruby" },
+  { value: "PHP", label: "PHP" },
+  { value: "Swift", label: "Swift" },
+  { value: "Kotlin", label: "Kotlin" },
+  { value: "Dart", label: "Dart" },
+  { value: "Shell", label: "Shell" },
+  { value: "HTML", label: "HTML" },
+  { value: "CSS", label: "CSS" }
+];
